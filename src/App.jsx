@@ -2,7 +2,11 @@ import { useEffect, useState } from "react";
 import { Alert, Col, Container, Form, InputGroup, Row, Button } from "react-bootstrap";
 
 function App() {
-	const defaultState = { a: 0, b: 0, c: 0 };
+	const emptyData = { a: 0, b: 0, c: 0 };
+	const testData = { a: 21.6, b: 15.4, c: 28.7 };
+
+	const defaultState = emptyData;
+
 	const [data, setData] = useState(defaultState);
 	const [area, setArea] = useState(0);
 
