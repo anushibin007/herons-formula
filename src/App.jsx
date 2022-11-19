@@ -65,6 +65,8 @@ function App() {
 						aria-label="Length of Side a"
 						aria-describedby="basic-addon1"
 						id="a"
+						type="number"
+						inputMode="decimal"
 						value={data.a}
 						onChange={handleDataInputChange}
 					/>
@@ -76,6 +78,8 @@ function App() {
 						aria-label="Length of Side b"
 						aria-describedby="basic-addon1"
 						id="b"
+						type="number"
+						inputMode="decimal"
 						value={data.b}
 						onChange={handleDataInputChange}
 					/>
@@ -87,6 +91,8 @@ function App() {
 						aria-label="Length of Side c"
 						aria-describedby="basic-addon1"
 						id="c"
+						type="number"
+						inputMode="decimal"
 						value={data.c}
 						onChange={handleDataInputChange}
 					/>
