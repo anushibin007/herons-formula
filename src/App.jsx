@@ -27,7 +27,10 @@ function App() {
 	}, [data.a, data.b, data.c]);
 
 	const handleDataInputChange = (event) => {
-		setData({ ...data, [event.target.id]: parseFloat(event.target.value) });
+		const value = event.target.value;
+		if (value) {
+			setData({ ...data, [event.target.id]: value });
+		}
 	};
 
 	const handleReset = () => {
@@ -36,7 +39,7 @@ function App() {
 	};
 
 	const log = (msg) => {
-		console.log(msg);
+//		console.log(msg);
 	};
 
 	return (
@@ -44,12 +47,12 @@ function App() {
 			<Container>
 				<Alert className="my-3">
 					<Row>
-						{area === 0 && (
+						{area == 0 && (
 							<Col className="col-md-9">
 								Enter all three sides to calculate the Area
 							</Col>
 						)}
-						{area > 0 && <Col className="col-md-9">Area = {area}</Col>}
+						{area != 0 && <Col className="col-md-9">Area = {area}</Col>}
 						<Col className="col-md-3">
 							<Button onClick={handleReset} variant="warning">
 								Reset
