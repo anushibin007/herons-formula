@@ -28,9 +28,7 @@ function App() {
 
 	const handleDataInputChange = (event) => {
 		const value = event.target.value;
-		if (value) {
-			setData({ ...data, [event.target.id]: value });
-		}
+		setData({ ...data, [event.target.id]: value });
 	};
 
 	const handleReset = () => {
@@ -39,7 +37,7 @@ function App() {
 	};
 
 	const log = (msg) => {
-//		console.log(msg);
+		//		console.log(msg);
 	};
 
 	return (
@@ -67,7 +65,6 @@ function App() {
 						aria-label="Length of Side a"
 						aria-describedby="basic-addon1"
 						id="a"
-						type="number"
 						value={data.a}
 						onChange={handleDataInputChange}
 					/>
@@ -79,7 +76,6 @@ function App() {
 						aria-label="Length of Side b"
 						aria-describedby="basic-addon1"
 						id="b"
-						type="number"
 						value={data.b}
 						onChange={handleDataInputChange}
 					/>
@@ -91,7 +87,6 @@ function App() {
 						aria-label="Length of Side c"
 						aria-describedby="basic-addon1"
 						id="c"
-						type="number"
 						value={data.c}
 						onChange={handleDataInputChange}
 					/>
